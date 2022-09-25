@@ -1,15 +1,15 @@
-1. Project Overview
+# 1. Project Overview
 
-XOR Cipher:
+## XOR Cipher:
 An XOR Cipher is an example of a symmetric-key cryptosystem or a “secret key” system. This system sends an encrypted message along with an encrypted key to open the message. In this system the same key is used both for encryption and decryption of the image or message. The process in which this operates is an image is taken and encrypted using a key generator, that image is then transmitted to the receiver who uses the same key generator to decrypt the image. The issue with this method is that it requires both parties have the same key generator, and neither can send the key generator to the other because it could be intercepted and therefore useless. This means this system is great as long as it was set up before messages were being intercepted, or face to face.
 
-Noise Reduction:
+## Noise Reduction:
 This is a crucial step to complete before developing a gradient map. Edge detection involves viewing pixel derivatives to identify the location of discontinuities. These discontinuities are where the edges are located. Smoothing an image prior to edge detection is vital because it ensures that only actual edges are detected. An image with a large amount of noise will likely identify many false edges.
 
-Gradient Map:
+## Gradient Map:
 In this project we were able to develop a gradient map by implementing the sobel algorithm. In the simplest of terms, the sobel algorithm operates by running a small matrix window over each value in a grayscale image matrix. For every value in the matrix, the algorithm measures the gradient change in the window. The greater the gradient change, the more intense the edge is.
 
-2. Discussion of Algorithmn Design
+# 2. Discussion of Algorithmn Design
 
 `importImage()`
 Using matplotlib to import a PNG file results in a data type of float32. The range of this data type is [0.0,1.0]. Importing both a JPG image and a TIFF image results in a data type of uint8. The range of this data type is [0,255]. Since we want values in a range of [0,255] the image will need to be uint8. Conversion from float32 to uint8 can be done by multiplying the data by 255 and then casting it as uint8. The following code demonstrates this:
