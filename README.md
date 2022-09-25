@@ -68,7 +68,9 @@ Next we can iterate through each row and column of the grayscale image to access
              smoothIm[row][column] = blurryPixel
 ```
 The for loops range only on the rows and columns in which the center pixel of the window will have sufficient points around it. The sum of the window multiplied by the gaussian kernel is set equal to the variable blurryPixel. The value of smoothIm at the current iteration’s row and column index is set equal to the value held by blurryPixel. The final step of this function is to simply return the smoothIm matrix.
-`return smoothIm`
+```
+return smoothIm
+```
 Despite the function only being able to work with grayscale images, it is still optimal for future edge detection programs. Grayscale images are best suited for edge detection due to efficiency and simplicity. Edge detection on color images requires much more complex algorithms. This is because you would have to operate on all 3 color channels.
 
 `edgeDetection()`
