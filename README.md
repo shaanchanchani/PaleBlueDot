@@ -1,4 +1,8 @@
-# 1. Project Overview
+# 1. User Manual 
+
+This is an image processing project I completed for a python course at Purdue University. The program is designed to run on the encrypted image file `Pale_Blue_Dot_Encrypted.tiff` and the initial key is the string `COME AND GET YOUR LOVE`.
+
+# 2. Project Overview
 
 ## XOR Cipher:
 An XOR Cipher is an example of a symmetric-key cryptosystem or a “secret key” system. This system sends an encrypted message along with an encrypted key to open the message. In this system the same key is used both for encryption and decryption of the image or message. The process in which this operates is an image is taken and encrypted using a key generator, that image is then transmitted to the receiver who uses the same key generator to decrypt the image. The issue with this method is that it requires both parties have the same key generator, and neither can send the key generator to the other because it could be intercepted and therefore useless. This means this system is great as long as it was set up before messages were being intercepted, or face to face.
@@ -9,7 +13,7 @@ This is a crucial step to complete before developing a gradient map. Edge detect
 ## Gradient Map:
 In this project we were able to develop a gradient map by implementing the sobel algorithm. In the simplest of terms, the sobel algorithm operates by running a small matrix window over each value in a grayscale image matrix. For every value in the matrix, the algorithm measures the gradient change in the window. The greater the gradient change, the more intense the edge is.
 
-# 2. Discussion of Algorithmn Design
+# 3. Discussion of Algorithmn Design
 
 `importImage()`
 Using matplotlib to import a PNG file results in a data type of float32. The range of this data type is [0.0,1.0]. Importing both a JPG image and a TIFF image results in a data type of uint8. The range of this data type is [0,255]. Since we want values in a range of [0,255] the image will need to be uint8. Conversion from float32 to uint8 can be done by multiplying the data by 255 and then casting it as uint8. The following code demonstrates this:
@@ -107,14 +111,3 @@ for row in range(2, smoothIm.shape[0]-2):
 return gradientMag, croppedIm
 ```
 This function would be difficult to implement in future image projects, as it is catered specifically for the pale blue dot image. However, the gradient map portion can easily be pulled out and placed in its own function for future use.
-
-`plotColorDistribution()`
-When using the initial key of 4 the encryption is much better. This can be displayed by comparing the peaks of the histograms (a.figure6 and a.figure8). A larger peak means a greater information entropy, effectively making the image more difficult to decipher.
-
-3. References 
-Good links for further research
-https://jivp-eurasipjournals.springeropen.com/articles/10.1186/s13640-018-0386-3 
-https://ui.adsabs.harvard.edu/abs/2018JPhCS1004a2023T/abstract 
-https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7998182/
-
-4. Appendices:
