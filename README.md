@@ -1,6 +1,6 @@
 # 1. User Manual 
 
-This is an image processing project I completed for a python course at Purdue University. The program is designed to run on the encrypted image file `Pale_Blue_Dot_Encrypted.tiff` and the initial key is the string `COME AND GET YOUR LOVE`.
+This is an image processing project I completed for a python course at Purdue University. The program is designed to run on the encrypted image file `Pale_Blue_Dot_Encrypted.tiff` and the initial key is the string `COME AND GET YOUR LOVE`. Expected output figures from this program can be found in the Appendicies section of the project report pdf. 
 
 # 2. Project Overview
 
